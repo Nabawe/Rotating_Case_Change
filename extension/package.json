@@ -1,0 +1,135 @@
+{
+    "name": "Rotating_Case_Change",
+    "displayName": "Rotating Case Change",
+    "description": "Rotates thru user defined spelling cases.",
+    "version": "1.1.0",
+    "publisher": "zhengxiaoyao0716",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.changeCase"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.changeCase",
+                "title": "Rotates thru user defined spelling cases."
+            }
+        ],
+        "keybindings": {
+            "key": "ctrl+capslock",
+            "command": "extension.changeCase",
+            "when": "editorTextFocus"
+        },
+        "configuration": {
+            "title": "Intelligence change case settings.",
+            "properties": {
+                "Rotating_Case_Change.py": {
+                    "type": "array",
+                    "default": [
+                        "snake_case",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.go": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.js": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.ts": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.java": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.cs": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.cpp": {
+                    "type": "array",
+                    "default": [
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.c": {
+                    "type": "array",
+                    "default": [
+                        "snake_case",
+                        "camelCase",
+                        "PascalCase",
+                        "CONST_CASE"
+                    ]
+                },
+                "Rotating_Case_Change.css": {
+                    "type": "array",
+                    "default": [
+                        "snake_case",
+                        "param-case"
+                    ]
+                },
+                "Rotating_Case_Change.default": {
+                    "type": "array",
+                    "default": [
+                        "lower case",
+                        "UPPER CASE",
+                        "camelCase",
+                        "PascalCase",
+                        "snake_case",
+                        "CONST_CASE",
+                        "param-case"
+                    ]
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    },
+    "dependencies": {
+        "camel-case": "^3.0.0",
+        "constant-case": "^2.0.0",
+        "param-case": "^2.1.0",
+        "pascal-case": "^2.0.0",
+        "snake-case": "^2.1.0"
+    }
+}
