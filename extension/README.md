@@ -1,3 +1,7 @@
+To-Do:
+	Rotate Backwards
+	Space Separated Words
+
 # Intelligence change word case.
 
 ![clip0](https://raw.githubusercontent.com/zhengxiaoyao0716/vscode-intelligence-change-case/master/.request/clip0.gif)
